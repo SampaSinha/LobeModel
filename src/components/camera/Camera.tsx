@@ -12,7 +12,7 @@ type CameraProps = {
 function Camera({ predictCanvas, predictions }: CameraProps) {
     const [devices, setDevices] = useState<MediaDeviceInfo[]>([]);
     const [deviceId, setDeviceId] = useState<string | undefined>(undefined);
-    const [imageFlip, setImageFlip] = useState(true);
+    const [imageFlip, setImageFlip] = useState(false);
     const webcamRef = useRef<Webcam>(null);
     const [selectorVisible, setSelectorVisible] = useState(false);
 
@@ -24,9 +24,9 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
             const videoDevices = mediaDevices.filter(({kind}) => kind === "videoinput");
             setDevices(videoDevices);
             // set our initial webcam to be the first in the list
-            if (videoDevices.length > 0) {
-                setDeviceId(videoDevices[0].deviceId);
-            }
+           // if (videoDevices.length > 0) {
+            //    setDeviceId(videoDevices[0].deviceId);
+            //}
         },[setDevices, setDeviceId]
     );
     useEffect(() => {
