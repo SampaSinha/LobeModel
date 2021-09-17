@@ -24,9 +24,9 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
             const videoDevices = mediaDevices.filter(({kind}) => kind === "videoinput");
             setDevices(videoDevices);
             // set our initial webcam to be the first in the list
-           // if (videoDevices.length > 0) {
-            //    setDeviceId(videoDevices[0].deviceId);
-            //}
+                if (videoDevices.length > 0) {
+                setDeviceId(videoDevices[0].deviceId);
+             }
         },[setDevices, setDeviceId]
     );
     useEffect(() => {
