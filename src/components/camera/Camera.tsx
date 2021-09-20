@@ -72,8 +72,8 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
                 devices={devices}
                 deviceId={deviceId}
                 setDeviceId={setDeviceId}
-                imageFlip={imageFlip}
-                setImageFlip={setImageFlip}
+                //imageFlip={imageFlip}
+                //setImageFlip={setImageFlip}
                 selectorVisible={selectorVisible}
                 setSelectorVisible={setSelectorVisible}
             />
