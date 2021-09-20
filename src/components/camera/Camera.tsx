@@ -12,7 +12,7 @@ type CameraProps = {
 function Camera({ predictCanvas, predictions }: CameraProps) {
     const [devices, setDevices] = useState<MediaDeviceInfo[]>([]);
     const [deviceId, setDeviceId] = useState<string | undefined>(undefined);
-    const [imageFlip, setImageFlip] = useState(true);
+    //const [imageFlip, setImageFlip] = useState(true);
     const webcamRef = useRef<Webcam>(null);
     const [selectorVisible, setSelectorVisible] = useState(false);
 
