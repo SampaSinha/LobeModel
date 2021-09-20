@@ -88,7 +88,7 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
                     height: {ideal: 1080},
                     deviceId: !!deviceId ? {exact: deviceId} : undefined
                 }}
-                mirrored={imageFlip}
+                //mirrored={imageFlip}
             />
         </div>
     );
