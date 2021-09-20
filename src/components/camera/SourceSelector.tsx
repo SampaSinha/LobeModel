@@ -13,14 +13,15 @@ type SourceSelectorProps = {
     devices: MediaDeviceInfo[]
     deviceId?: string,
     setDeviceId: (deviceId: string) => void,
-    imageFlip: boolean,
-    setImageFlip: (imageFlip: boolean) => void,
+    //imageFlip: boolean,
+    //setImageFlip: (imageFlip: boolean) => void,
     selectorVisible: boolean,
     setSelectorVisible: (visible: boolean) => void
 }
 
 // Component for selecting the webcam source and flipping the image horizontally
-function SourceSelector({devices, deviceId, setDeviceId, imageFlip, setImageFlip, selectorVisible, setSelectorVisible}: SourceSelectorProps) {
+function SourceSelector({devices, deviceId, setDeviceId, //imageFlip, setImageFlip, 
+                            selectorVisible, setSelectorVisible}: SourceSelectorProps) {
     const [hovering, setHover] = useState(false);
 
     return (
@@ -41,16 +42,7 @@ function SourceSelector({devices, deviceId, setDeviceId, imageFlip, setImageFlip
                         key={device.deviceId}
                     />
                 ))}
-                <div className="toggle-container">
-                    <div className="toggle-item-container">
-                        <div className={`toggle-item source-device${(imageFlip) ? " source-selected" : ""}`}>
-                            {"Flip Image"}
-                        </div>
-                        <div onClick={() => setImageFlip(!imageFlip)} className="toggle-radio-button">
-                            <img src={imageFlip ? check : noCheck} alt={'Flip Webcam Button'} />
-                        </div>
-                    </div>
-                </div>
+                
             </BlurContainer>
         </div>
     )
