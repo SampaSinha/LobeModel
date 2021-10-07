@@ -58,7 +58,7 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
             let currentCanvas = canvas;
             while (!currentCanvas) {
                 // if no canvas, wait 500ms and try again
-                await sleep(500);
+                await sleep(10000);
                 currentCanvas = await getCanvas();
             }
             if (currentCanvas) {
