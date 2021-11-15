@@ -8,7 +8,7 @@ type PredictionProps = {
     top?: number
 }
 
-function Prediction({predictions, top=3}: PredictionProps) {
+function Prediction({predictions, top=1}: PredictionProps) {
     // display the top N (default 3) predictions returned from the model
     let sortedPredictions: Array<[string, number]> | undefined;
     if (!!predictions) {
